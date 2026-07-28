@@ -32,5 +32,10 @@ Calculator calculator = new Calculator();
 		assertEquals(-1.0f,res);
 	}
 
+	@Test
+	void modulus() {
+		int res = calculator.modulus(10, 3);
+		assertEquals(1, res);
+	}
 
 }
