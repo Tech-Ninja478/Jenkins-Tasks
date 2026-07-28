@@ -1,7 +1,12 @@
 package calculator;
 public class Calculator {
 	public static void main(String[] args){
-		System.out.println("Calculator!");
+		Calculator calc = new Calculator();
+
+		System.out.println("Addition: " + calc.sum(10,5));
+		System.out.println("Subtraction: " + calc.minus(45,10));
+		System.out.println("Multiplication: " + calc.multiply(25,4));
+		System.out.println("Division: " + calc.division(10, 5));
 	}
 
 	public int sum(int a, int b){
