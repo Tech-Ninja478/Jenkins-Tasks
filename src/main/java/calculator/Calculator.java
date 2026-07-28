@@ -20,4 +20,8 @@ public class Calculator {
 		if (b==0) return -1.0f;
 		return (1.0f*a)/b;
 	}
+
+	public int modulus(int a, int b){
+		return a % b;
+	}
 }
