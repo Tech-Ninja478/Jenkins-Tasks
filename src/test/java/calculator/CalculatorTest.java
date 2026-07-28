@@ -32,5 +32,10 @@ Calculator calculator = new Calculator();
 		assertEquals(-1.0f,res);
 	}
 
+	@Test
+	void power() {
+		double res = calculator.power(2, 3);
+		assertEquals(8, res);
+	}
 
 }
