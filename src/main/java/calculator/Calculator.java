@@ -26,6 +26,8 @@ public class Calculator {
 		return (1.0f*a)/b;
 	}
 
+	public int modulus(int a, int b){
+		return a % b;
 	public double power(int a, int b){
 		return Math.pow(a,b);
 	}

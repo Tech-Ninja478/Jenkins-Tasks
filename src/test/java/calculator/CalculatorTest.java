@@ -33,6 +33,9 @@ Calculator calculator = new Calculator();
 	}
 
 	@Test
+	void modulus() {
+		int res = calculator.modulus(10, 3);
+		assertEquals(1, res);
 	void power() {
 		double res = calculator.power(2, 3);
 		assertEquals(8, res);
