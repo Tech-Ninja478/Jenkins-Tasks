@@ -1,3 +1,5 @@
+@Library('Calculator-Shared-Library') _
+
 pipeline {
     agent any
 
@@ -6,32 +8,26 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Bokoffalexander/java_maven_junit.git'
+                    url: 'https://github.com/Tech-Ninja478/Jenkins-Tasks.git'
             }
         }
 
         stage('Build') {
             steps {
-                bat 'mvn clean compile'
+                buildApp()
             }
         }
 
         stage('Test') {
             steps {
-                bat 'mvn test'
-            }
-        }
-
-        stage('Package') {
-            steps {
-                bat 'mvn package'
+                testApp()
             }
         }
     }
 
     post {
         success {
-            archiveArtifacts artifacts: 'target/*.jar'
+            norifyBuild('Build Successfull')
         }
     }
 }
