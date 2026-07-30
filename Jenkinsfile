@@ -27,7 +27,7 @@ pipeline {
 
     post {
         success {
-            norifyBuild('Build Successfull')
+            notifyBuild('Build Successfull')
         }
     }
 }
