@@ -24,6 +24,12 @@ pipeline {
             }
         }
 
+        stage('Package') {
+            steps {
+                packageApp()
+            }
+        }
+
         stage('Deploy') {
             steps {
                 deployApp()
