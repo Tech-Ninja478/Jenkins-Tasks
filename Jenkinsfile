@@ -23,8 +23,13 @@ pipeline {
                 testApp()
             }
         }
-    }
 
+        stage('Deploy') {
+            steps {
+                deployApp()
+            }
+        }
+    }
     post {
         success {
             notifyBuild('Build Successfull')
